@@ -1,0 +1,6 @@
+{
+    "fps": 23.976,
+    "v_codec" : "h264",
+    "bitrate" : 4000,
+    "a_codec" : "mp3"
+}
