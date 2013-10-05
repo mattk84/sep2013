@@ -12,10 +12,6 @@ So you dump the attributes of each file, using JSON, into two directories:
 * working
 * not_working
 
-In this case, you will need to use a program to aggregate the data,
-but you will need to analyze that data yourself.
-
-
 Here's the question:  
 --
   
@@ -32,7 +28,7 @@ Given media files with the following attributes, would we expect them to play or
 `{
 	"fps": 24,
 	"v_codec": "mpeg2",
-	"bitrate": 5300,
+	"bitrate": 4100,
 	"a_codec": "mp3"
 }`
 
@@ -40,5 +36,19 @@ Given media files with the following attributes, would we expect them to play or
 	"fps": 30,
 	"v_codec": "h264",
 	"bitrate": 4400,
+	"a_codec": "mp3"
+}`
+
+`{
+	"fps": 25,
+	"v_codec": "h264",
+	"bitrate": 4100,
+	"a_codec": "aac"
+}`
+
+`{
+	"fps": 24,
+	"v_codec": "h264",
+	"bitrate": 5200,
 	"a_codec": "mp3"
 }`
