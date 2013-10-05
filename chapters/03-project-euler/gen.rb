@@ -12,12 +12,12 @@ File.open(filename, 'w+') do |f|
     f.write <<"EOS"
 #!/usr/bin/env ruby
 
-class Problem#{num}
+class Problem#{formatted}
     def self.run
     end
 end
 
-p Problem#{num}.run
+p Problem#{formatted}.run
 EOS
 
 end
