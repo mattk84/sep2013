@@ -18,6 +18,8 @@
   * Clone the class repo to get started (then you can read this locally)
 
   * Work through https://help.github.com/articles/fork-a-repo
+
+  * Glossary: https://help.github.com/articles/github-glossary
   
 * Things to cover:
   * Git
