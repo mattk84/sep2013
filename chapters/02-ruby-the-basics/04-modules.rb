@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-module GroupedMethods
+module StringMethods
     def self.with_bang(str)
         str + "!"
     end
@@ -9,7 +9,7 @@ module GroupedMethods
     end
 end
 
-puts GroupedMethods.with_bang("Smashing")
-puts GroupedMethods.with_question("Success")
+puts StringMethods.with_bang("Smashing")
+puts StringMethods.with_question("Success")
 
 puts Math.sqrt(9)
