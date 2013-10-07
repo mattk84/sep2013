@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 #
 def usage
-    puts "#{$0} read|write filename [contents_to_write]"
+    puts "usage: #{$0} read|write filename [contents_to_write]"
     exit 1
 end
 
@@ -17,7 +17,7 @@ when 'write'
     raise "File #{filename} exists!" if File.exists?(filename)
 
     contents = ARGV[2]
-    File.open(filename, 'w+') do |f|
+    File.open(filename, 'a+') do |f|
         f << contents
     end
 end
