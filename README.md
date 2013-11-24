@@ -6,8 +6,13 @@ A Programming Class, of sorts
   
 Topics to be touched upon, in no particular order:  
 
-* Git / GitHub
-* VirtualBox
-* Vagrant
-* Ruby
-* 
+* Tools:
+  * Git / GitHub
+  * VirtualBox
+  * Vagrant
+* Languages / etc:
+  * Ruby
+  * JavaScript
+  * SQL
+  * HTML
+  * CSS
