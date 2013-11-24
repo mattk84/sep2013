@@ -1,9 +1,10 @@
-## Create a simple key-value data store
+# Project 1
+## Create a simple key-value data store.
+
 All keys and values are strings.  
 Store data in one file on disk per key.  
 The name of the file should be the key.  
 The contents of the file should be the value.
-
 
 ### It should support the following operations:
 
@@ -14,7 +15,12 @@ The contents of the file should be the value.
     dump () # read all keys
     flush () # delete all keys
 
+### Implementation
 
+Design for re-use and testability: build a KeyValueStore (or similar) class.  
+Test this class independent of any command-line wrapper.  
+Then, build your command-line wrapper to map particular sets of
+command-line options to particular method invocations on the class.
 
 ###The following series of interactions should be possible:
 
@@ -48,3 +54,7 @@ The contents of the file should be the value.
 
 1. verify empty dump
     - app dump => "{}" or similar
+
+###What are the advantages and disadvantages of our approach:
+
+discuss Atomicity, Consistency, Multiple Users, etc.
