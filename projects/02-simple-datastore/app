@@ -1,0 +1,48 @@
+#!/usr/bin/env ruby
+
+require './keyvaluestore.rb'
+require 'fileutils'
+
+CACHE_DIR = '/tmp/kvs-cache'
+
+
+def usage
+  puts <<"EOS"
+usage:
+    #{$0} read key
+    #{$0} dump
+    #{$0} write key value
+    #{$0} delete key
+    #{$0} flush key
+EOS
+  exit 1
+end
+
+usage() if ARGV.size < 1
+
+unless File.exists?(CACHE_DIR) 
+  FileUtils.mkdir_p(CACHE_DIR) 
+end
+
+ks = KeyStore.new(CACHE_DIR)
+
+
+case ARGV[0]
+when 'read'
+  usage() if ARGV.size < 2
+  puts ks.read(ARGV[1])
+when 'write'
+  usage() if ARGV.size < 3 
+  ks.write(ARGV[1], ARGV[2])
+when 'delete'
+  usage() if ARGV.size < 2
+  ks.delete(ARGV[1])
+when 'dump'
+  puts ks.dump
+when 'flush'
+  puts 'Are you sure?  Press enter to flush.'
+  STDIN.gets
+  ks.flush
+else
+  usage()
+end
